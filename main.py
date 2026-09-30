@@ -34,6 +34,27 @@ print(f'age:-{student2.age}')
 print(student2.college)
 
 
+# encapsulation for student data
+#student marks update
+class student:
+  def __init__(self,name,marks):
+    self.__name=name
+    self.__marks=marks
+  def get_marks(self):
+    print(self.__marks)
+  def updatemarks(self,new_marks):
+    if new_marks <=100 and new_marks>0:
+      self.__marks=new_marks
+    else:
+      print('invaild data')
+student1=student('vamshi',100)
+student1.get_marks()
+student1.updatemarks(800)
+student1.updatemarks(80)
+student1.get_marks()
+
+
+
   
   
   
