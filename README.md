@@ -11,3 +11,11 @@ objects
 methods,init,self
 class methods and class varioubles
 
+
+day2 30/09 
+learn about encapsulation
+the methods and varioubles are work together to prevent direct data access through the class
+the data can be accessed and manipulated through the methods created in the class
+and '--' used for the data prvacy
+
+
