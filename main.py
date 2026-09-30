@@ -21,7 +21,7 @@ roll_no=257301
 #student1 is the object
 #the student1 object will acces the student class properties
 student1=student(name,age,roll_no)
-student2=student('pavan',20,21)
+student2=student('pavann',20,21)
 #calling the method for fullname
 student1.fullname()
 print(f'roll_no:-{student1.roll_no}')
