@@ -55,6 +55,59 @@ student1.get_marks()
 
 
 
+#inheritance
+class Bank_account:
+  def __init__(self,account_holder,balance):
+    self.account_holder=account_holder
+    self.balance=balance
+    print(f'account holder name = {self.account_holder}')
+    print(f'{account_holder} balance is = {self.balance}')
+  def deposit(self,money):
+    print(f' balance = {self.balance} ')
+    if money>0:
+      self.balance+=money
+      print(f'balance after deposit = {self.balance}')
+    else:
+      print('invalid deposit')
+  def withdraw(self,money):
+    if money <= self.balance:
+      self.balance-=money
+      print(f'after withdraw the balance = {self.balance}')
+    else:
+      print('insufficent balance')
+class savings_account(Bank_account):
+  def calculate_intrest(self,intrest_rate):
+    intrest= (self.balance*intrest_rate/100)
+    print(intrest)
+class current_account(Bank_account):
+  def over_draft(self,withdraw_amount,overdraft_limit):
+    if withdraw_amount<self.balance:
+      self.balance = self.balance-withdraw_amount
+      print(f'overdraft_limit is {overdraft_limit}')
+      print(f'remaining balance is {self.balance}')
+    elif withdraw_amount<= self.balance + overdraft_limit:
+          overdraft_limit-=(withdraw_amount-self.balance)
+          self.balance = (self.balance - withdraw_amount)
+          print(f'remaining overdraft_limit is {overdraft_limit}')
+          print(f'the balance = {self.balance}')
+    else:
+      print('insufficent_funds')
+student1=savings_account('vamshi',3000)
+student1.deposit(2000)
+student1.withdraw(1000)
+student1.calculate_intrest(5)
+student2=current_account('shiva',4000)
+student2.over_draft(2000,2000)
+
+
+
+
+    
+      
+  
+
+
+
   
   
   
