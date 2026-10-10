@@ -21,11 +21,17 @@ a child class that can use the methods and attributes of the parent class called
 i had implemented inheritance code for bank_account methods
 
 #structure
+
 parent class(account_holder,balance)
+
   methods deposit,withdraw
+  
 childclass(parent class)
+
   methods to find intrest for balance
+  
 child class(parent class)
+
    methods :-to set overdraft limit for balance
 
 
