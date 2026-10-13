@@ -16,6 +16,7 @@ the methods and varioubles are work together to prevent direct data access throu
 the data can be accessed and manipulated through the methods created in the class
 and '--' used for the data prvacy
 
+#inheritance
 today i learn about inheritance 
 a child class that can use the methods and attributes of the parent class called inheritance
 i had implemented inheritance code for bank_account methods
@@ -33,5 +34,15 @@ childclass(parent class)
 child class(parent class)
 
    methods :-to set overdraft limit for balance
+
+
+#polymorphism
+i understand that polymorphism means that same method name but diff functionality
+
+and method_overriding
+
+same method name defined in the child class which already created in the parent class 
+which overrides the parent method
+
 
 
