@@ -100,6 +100,52 @@ student2=current_account('shiva',4000)
 student2.over_draft(2000,2000)
 
 
+#polymorphism
+class full_time_employee:
+  def __init__(self,no_of_months,salary):
+    self.no_of_months=no_of_months
+    self.salary=salary
+  def calculate_salary(self):
+    if self.no_of_months >= 1 and self.no_of_months < 12:
+      print(self.salary * self.no_of_months)
+    else:
+      print('invaild months')
+class part_time_employee(full_time_employee):
+  def __init__(self,hours,hours_rate):
+    self.hours = hours
+    self.hours_rate = hours_rate
+  def calculate_salary(self):
+    if self.hours>0 and self.hours<=24:
+      print(self.hours*self.hours_rate)
+    else:
+      print('invaild hours')
+class contract_based(full_time_employee):
+  def __init__(self,days,daily_rate):
+    self.days=days
+    self.daily_rate=daily_rate
+  def calculate_salary(self):
+    if self.days >0 and self.days<=364:
+      print(self.days*self.daily_rate)
+    else:
+      print('invaild data')
+#objects
+vamshi=full_time_employee(5,20000)
+pranay=part_time_employee(4,2000)
+shiva=contract_based(30,3000)
+
+employee=[vamshi,pranay,shiva]
+for emp in employee:
+  emp.calculate_salary()
+
+      
+      
+      
+      
+
+      
+  
+
+
 
 
     
