@@ -45,4 +45,18 @@ same method name defined in the child class which already created in the parent 
 which overrides the parent method
 
 
+#abstraction
+i learned about abstraction in python
+
+it will hide unnecessary implementation details and show required data
+
+abc use for abstract class and 
+@abstractmethod use to abstract the method 
+
+when a method is abstract in parent class
+
+the child which is inherit from the parent class it should use the method which abstract in the parent class
+
+developers use when they forget to define the methods in the child class
+
 
