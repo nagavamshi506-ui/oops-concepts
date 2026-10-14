@@ -137,8 +137,54 @@ employee=[vamshi,pranay,shiva]
 for emp in employee:
   emp.calculate_salary()
 
-      
-      
+
+
+#abstraction
+
+
+from abc import ABC, abstractmethod
+class payment(ABC):
+  @abstractmethod
+  def process_payment(self,amount):
+    pass
+  def validate_payment(self,amount):
+    if amount<0:
+      print('insufficent money')
+    else:
+      print(f'the amount is {amount}')
+class upi_payment(payment):
+  def process_payment(self,amount):
+    if amount > 10000 :
+      print ('limit exceed')
+    elif amount <=0:
+      print('invaild money')
+    else:
+      print(f'the upi_payment is {amount}')
+class card_payment(payment):
+  def process_payment(self,amount):
+    if amount > 50000:
+      print('limit exceed')
+    elif amount <=0:
+      print('invaild money')
+    else:
+      print(f'the card_payment is {amount}')
+class hand_payment(payment):
+  def process_payment(self,amount):
+    if amount > 5000:
+      print('limit exceed')
+    elif amount <=0:
+      print('invaild money')
+    else:
+      print(f'the hand_payment is {amount}')
+person1 = upi_payment()
+person2 = card_payment()
+person3 = hand_payment()
+
+person1.process_payment(6000)
+person2.process_payment(16000)
+person3.process_payment(6000)
+
+
       
       
 
