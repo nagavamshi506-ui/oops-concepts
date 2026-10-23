@@ -60,3 +60,26 @@ the child which is inherit from the parent class it should use the method which 
 developers use when they forget to define the methods in the child class
 
 
+#task to implement four pillars
+i had done a small task to implement the four pillars of the oop
+created simple banking system using four oop concepts
+
+Concepts implemented:
+
+Encapsulation: Protecting account balance using private attributes and getter methods.
+Inheritance: Reusing common functionality through the parent bank_account class.
+Polymorphism: Implementing method overriding by redefining show_balance() in the current_account class.
+Abstraction: Using ABC and @abstractmethod to define required behavior for account types.
+
+Features implemented:
+
+Deposit and withdrawal
+Interest calculation
+Overdraft facility
+Account balance management
+Testing the project:
+
+Created test cases to verify expected outputs for different banking operations.
+
+Tested edge cases, including invalid deposits, insufficient balance, and overdraft limits.
+This hands-on task helped me understand how OOP concepts work in practice rather than just learning their definitions.
